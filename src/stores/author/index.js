@@ -8,12 +8,16 @@ export const useAuthorStore = defineStore('author', () => {
   const authors = ref([])
   const isLoading = ref(true)
 
+  /**
+   * Fetches all Author records.
+   * @returns {Promise}
+   */
   const fetchAll = async () => {
     try {
       isLoading.value = true
 
       const result = await request("/graphql", fetchAllAuthorsQuery)
-      authors.value = result?.articles ?? []
+      authors.value = result?.authors ?? []
     } catch (error) {
       logError('authorStore/fetchAll **fail**', {
         error: error.message,

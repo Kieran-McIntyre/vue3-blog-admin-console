@@ -1,14 +1,15 @@
 <script setup>
 import { useRoute } from 'vue-router'
+import content from "./content"
 
 const currentRoute = useRoute();
 const navLinks = [
   {
-    label: "Articles",
+    label: content.link.articles,
     route: { name: "Articles" },
   },
   {
-    label: "Authors",
+    label: content.link.authors,
     route: { name: "Authors" },
   },
 ]
@@ -36,6 +37,7 @@ const isRouteSelected = (routeName) => {
           'bg-blue-200': !isRouteSelected(navLink.route.name),
           'bg-red-200': isRouteSelected(navLink.route.name),
         }"
+        data-test="router-link"
       >
         {{ navLink.label }}
       </router-link>

@@ -8,6 +8,10 @@ export const useArticleStore = defineStore('article', () => {
   const articles = ref([])
   const isLoading = ref(true)
 
+  /**
+   * Fetches all Article records.
+   * @returns {Promise}
+   */
   const fetchAll = async () => {
     try {
       isLoading.value = true
