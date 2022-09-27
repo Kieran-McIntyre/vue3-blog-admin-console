@@ -10,6 +10,9 @@ const router = createRouter({
       path: '/',
       name: 'Home',
       component: Home,
+      redirect: {
+        name: "Articles"
+      },
       children: [
         {
           path: 'articles',
