@@ -61,7 +61,10 @@ describe('Article store', () => {
       await articleStore.fetchAll()
 
       // Assert.
-      expect(articleStore.articles).toEqual(expectedArticles)
+      expect(articleStore.articles).toEqual([
+        expect.objectContaining(expectedArticles[0]),
+        expect.objectContaining(expectedArticles[1]),
+      ])
     })
 
     it("request has resolved > should set loading to false", async () => {

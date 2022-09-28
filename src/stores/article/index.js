@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import { request } from "graphql-request"
 import { fetchAllArticlesQuery } from "./queries"
 import { logError } from '@/utils/logger'
+import { createArticle } from '@/models/createArticle'
 
 export const useArticleStore = defineStore('article', () => {
   const articles = ref([])
@@ -17,7 +18,9 @@ export const useArticleStore = defineStore('article', () => {
       isLoading.value = true
 
       const result = await request("/graphql", fetchAllArticlesQuery)
-      articles.value = result?.articles ?? []
+      const articleData = result?.articles ?? []
+
+      articles.value = articleData.map(createArticle)
     } catch (error) {
       logError('articleStore/fetchAll **fail**', {
         error: error.message,

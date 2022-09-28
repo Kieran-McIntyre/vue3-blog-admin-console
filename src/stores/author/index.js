@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import { request } from "graphql-request"
 import { fetchAllAuthorsQuery } from "./queries"
 import { logError } from '@/utils/logger'
+import { createAuthor } from '@/models/createAuthor'
 
 export const useAuthorStore = defineStore('author', () => {
   const authors = ref([])
@@ -17,7 +18,9 @@ export const useAuthorStore = defineStore('author', () => {
       isLoading.value = true
 
       const result = await request("/graphql", fetchAllAuthorsQuery)
-      authors.value = result?.authors ?? []
+      const authorData = result?.authors ?? []
+      
+      authors.value = authorData.map(createAuthor)
     } catch (error) {
       logError('authorStore/fetchAll **fail**', {
         error: error.message,

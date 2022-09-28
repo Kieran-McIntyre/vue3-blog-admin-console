@@ -62,7 +62,11 @@ describe('Author store', () => {
       await authorStore.fetchAll()
 
       // Assert.
-      expect(authorStore.authors).toEqual(expectedAuthors)
+      expect(authorStore.authors).toEqual([
+        expect.objectContaining(expectedAuthors[0]),
+        expect.objectContaining(expectedAuthors[1]),
+        expect.objectContaining(expectedAuthors[2]),
+      ])
     })
 
     it("request has resolved > should set loading to false", async () => {

@@ -1,9 +1,11 @@
 export const fetchAllAuthorsQuery = `
-    query Authors {
-        authors {
-            id
-            firstName
-            lastName
-        }
+  query Authors {
+    authors {
+      id
+      firstName
+      lastName
+      imageUrl
+      location
     }
+  }
 `

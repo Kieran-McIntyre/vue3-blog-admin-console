@@ -3,6 +3,9 @@ export const fetchAllArticlesQuery = `
     articles {
         id
         title
+        heroImageUrl
+        publishedAt
+        isPublished
         tags {
           id
           name
