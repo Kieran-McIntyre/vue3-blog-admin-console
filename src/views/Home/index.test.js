@@ -1,13 +1,13 @@
-import { describe, it, expect } from 'vitest'
-import { shallowMount } from '@vue/test-utils'
-import HomeView from './index.vue'
+import { describe, it, expect } from "vitest"
+import { shallowMount } from "@vue/test-utils"
+import HomeView from "./index.vue"
 
-describe('HomeView', () => {
+describe("HomeView", () => {
   const mountComp = () => {
     return shallowMount(HomeView)
   }
 
-  it('should render', () => {
+  it("should render", () => {
     // Arrange.
     const wrapper = mountComp()
 

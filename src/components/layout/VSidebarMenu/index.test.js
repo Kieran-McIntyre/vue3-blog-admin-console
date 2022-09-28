@@ -1,16 +1,16 @@
-import { describe, it, expect } from 'vitest'
-import { shallowMount } from '@vue/test-utils'
-import VSidebarMenu from './index.vue'
+import { describe, it, expect } from "vitest"
+import { shallowMount } from "@vue/test-utils"
+import VSidebarMenu from "./index.vue"
 import content from "./content"
 
 const stubs = {
-  'FontAwesomeIcon': true,
-  'router-link': {
-    template: "<div><slot /></div>"
+  FontAwesomeIcon: true,
+  "router-link": {
+    template: "<div><slot /></div>",
   },
 }
 
-describe('VSidebarMenu', () => {
+describe("VSidebarMenu", () => {
   const mountComp = () => {
     return shallowMount(VSidebarMenu, {
       global: {
@@ -19,7 +19,7 @@ describe('VSidebarMenu', () => {
     })
   }
 
-  it('should render', () => {
+  it("should render", () => {
     // Arrange.
     const wrapper = mountComp()
 
@@ -33,7 +33,7 @@ describe('VSidebarMenu', () => {
       const wrapper = mountComp()
 
       // Assert.
-      const navLinks = wrapper.findAll('[data-test="router-link"]')
+      const navLinks = wrapper.findAll("[data-test=\"router-link\"]")
 
       expect(navLinks.length).toBe(2)
       expect(navLinks.at(0).text()).toBe(content.link.articles)

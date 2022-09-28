@@ -1,14 +1,14 @@
-import { describe, it, beforeEach, expect, vi } from 'vitest'
-import { setActivePinia, createPinia } from 'pinia'
-import { useAuthorStore } from '.'
+import { describe, it, beforeEach, expect, vi } from "vitest"
+import { setActivePinia, createPinia } from "pinia"
+import { useAuthorStore } from "."
 import { request } from "graphql-request"
 import { fetchAllAuthorsQuery } from "./queries"
 
 vi.mock("graphql-request", () => ({
-  request: vi.fn()
+  request: vi.fn(),
 }))
 
-describe('Author store', () => {
+describe("Author store", () => {
   beforeEach(() => {
     vi.clearAllMocks()
 
@@ -50,7 +50,7 @@ describe('Author store', () => {
       ]
 
       request.mockResolvedValue({
-        authors: expectedAuthors
+        authors: expectedAuthors,
       })
 
       const authorStore = useAuthorStore()

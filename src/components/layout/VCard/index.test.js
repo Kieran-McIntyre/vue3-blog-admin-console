@@ -1,12 +1,12 @@
-import { describe, it, expect } from 'vitest'
-import { shallowMount } from '@vue/test-utils'
-import VCard from './index.vue'
+import { describe, it, expect } from "vitest"
+import { shallowMount } from "@vue/test-utils"
+import VCard from "./index.vue"
 
 const stubs = {
-  'Skeletor': true,
-  'FontAwesomeIcon': true,
-  'router-link': {
-    template: "<div><slot /></div>"
+  Skeletor: true,
+  FontAwesomeIcon: true,
+  "router-link": {
+    template: "<div><slot /></div>",
   },
 }
 
@@ -17,17 +17,17 @@ const defaultProps = {
   },
 }
 
-describe('VCard', () => {
+describe("VCard", () => {
   const mountComp = ({ props = defaultProps } = {}) => {
     return shallowMount(VCard, {
       global: {
         stubs,
       },
-      props
+      props,
     })
   }
 
-  it('should render', () => {
+  it("should render", () => {
     // Arrange.
     const wrapper = mountComp()
 
@@ -46,9 +46,9 @@ describe('VCard', () => {
       })
 
       // Assert.
-      expect(wrapper.find('skeletor-stub').exists()).toBe(true)
-      expect(wrapper.find('[data-test="card-image"]').exists()).toBe(false)
-      expect(wrapper.find('[data-test="card-details"]').exists()).toBe(false)
+      expect(wrapper.find("skeletor-stub").exists()).toBe(true)
+      expect(wrapper.find("[data-test=\"card-image\"]").exists()).toBe(false)
+      expect(wrapper.find("[data-test=\"card-details\"]").exists()).toBe(false)
     })
 
     it("is NOT loading > should render item details", () => {
@@ -62,7 +62,7 @@ describe('VCard', () => {
         ],
         to: {
           name: "SomeRouteName",
-        }
+        },
       }
 
       const wrapper = mountComp({
@@ -73,19 +73,19 @@ describe('VCard', () => {
       })
 
       // Assert.
-      expect(wrapper.find('skeletor-stub').exists()).toBe(false)
+      expect(wrapper.find("skeletor-stub").exists()).toBe(false)
 
-      expect(wrapper.find('[data-test="card-title"]').text()).toBe(item.title)
-      expect(wrapper.find('[data-test="card-image"]').attributes().src).toBe(item.imageUrl)
+      expect(wrapper.find("[data-test=\"card-title\"]").text()).toBe(item.title)
+      expect(wrapper.find("[data-test=\"card-image\"]").attributes().src).toBe(item.imageUrl)
 
-      expect(wrapper.findAll('[data-test="card-detail"]').length).toBe(2)
-      expect(wrapper.findAll('[data-test="card-detail"]').at(0).text())
+      expect(wrapper.findAll("[data-test=\"card-detail\"]").length).toBe(2)
+      expect(wrapper.findAll("[data-test=\"card-detail\"]").at(0).text())
         .toBe(item.details[0].label)
-      expect(wrapper.findAll('[data-test="card-detail-icon"]').at(0).attributes().icon)
+      expect(wrapper.findAll("[data-test=\"card-detail-icon\"]").at(0).attributes().icon)
         .toBe(item.details[0].icon)
-      expect(wrapper.findAll('[data-test="card-detail"]').at(1).text())
+      expect(wrapper.findAll("[data-test=\"card-detail\"]").at(1).text())
         .toBe(item.details[1].label)
-      expect(wrapper.findAll('[data-test="card-detail-icon"]').at(1).attributes().icon)
+      expect(wrapper.findAll("[data-test=\"card-detail-icon\"]").at(1).attributes().icon)
         .toBe(item.details[1].icon)
     })
 
@@ -99,10 +99,10 @@ describe('VCard', () => {
       })
 
       // Assert.
-      expect(wrapper.find('[data-test="card-image"]').classes()).toEqual([
+      expect(wrapper.find("[data-test=\"card-image\"]").classes()).toEqual([
         "h-20",
         "w-20",
-        "rounded-full"
+        "rounded-full",
       ])
     })
 
@@ -116,10 +116,10 @@ describe('VCard', () => {
       })
 
       // Assert.
-      expect(wrapper.find('[data-test="card-image"]').classes()).toEqual([
+      expect(wrapper.find("[data-test=\"card-image\"]").classes()).toEqual([
         "h-20",
         "w-20",
-        "rounded"
+        "rounded",
       ])
     })
   })

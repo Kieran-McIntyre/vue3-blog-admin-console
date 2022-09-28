@@ -1,8 +1,8 @@
-import { describe, it, expect } from 'vitest'
-import { shallowMount } from '@vue/test-utils'
-import VListLayout from './index.vue'
+import { describe, it, expect } from "vitest"
+import { shallowMount } from "@vue/test-utils"
+import VListLayout from "./index.vue"
 
-describe('VListLayout', () => {
+describe("VListLayout", () => {
   const defaultProps = {
     title: "Some title",
     items: [],
@@ -14,7 +14,7 @@ describe('VListLayout', () => {
     })
   }
 
-  it('should render', () => {
+  it("should render", () => {
     // Arrange.
     const wrapper = mountComp()
 

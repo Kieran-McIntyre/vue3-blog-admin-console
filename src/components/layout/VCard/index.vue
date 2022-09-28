@@ -1,5 +1,5 @@
 <script setup>
-import { Skeletor } from 'vue-skeletor';
+import { Skeletor } from "vue-skeletor";
 
 defineProps({
   item: {

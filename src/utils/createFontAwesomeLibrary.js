@@ -1,5 +1,5 @@
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUser, faCalendar, faLocationDot, faUsers, faBook } from '@fortawesome/free-solid-svg-icons'
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { faUser, faCalendar, faLocationDot, faUsers, faBook } from "@fortawesome/free-solid-svg-icons"
 
 const FA_ICONS = [
   faUser,

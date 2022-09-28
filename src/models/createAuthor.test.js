@@ -1,13 +1,13 @@
 import { describe, expect, it } from "vitest"
 import { createAuthor } from "./createAuthor"
 
-describe('createAuthor', () => {
-  it('should return correctly', () => {
+describe("createAuthor", () => {
+  it("should return correctly", () => {
     // Arrange.
     const authorData = {
-      id: 'some-author-id',
-      firstName: 'Author First Name',
-      lastName: 'Author Last Name',
+      id: "some-author-id",
+      firstName: "Author First Name",
+      lastName: "Author Last Name",
     }
 
     const author = createAuthor(authorData)

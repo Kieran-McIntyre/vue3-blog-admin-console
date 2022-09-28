@@ -1,7 +1,7 @@
 <script setup>
-import { computed, onMounted } from 'vue'
+import { computed, onMounted } from "vue"
 import { useRouter } from "vue-router"
-import { useAuthorStore } from '@/stores/author'
+import { useAuthorStore } from "@/stores/author"
 import VListLayout from "@/components/layout/VListLayout/index.vue"
 import content from "./content"
 
@@ -14,7 +14,7 @@ onMounted(() => {
 
 const handleClickCreate = () => {
   router.push({
-    name: "ArticleCreate"
+    name: "ArticleCreate",
   })
 }
 
@@ -24,14 +24,14 @@ const formatAuthor = (author) => {
     title: author.getFullName(),
     imageUrl: author.imageUrl,
     details: [
-      { icon: 'fa-location-dot', label: author.location },
+      { icon: "fa-location-dot", label: author.location },
     ],
     to: {
       name: "AuthorCreate",
       params: {
         id: author.id,
-      }
-    }
+      },
+    },
   }
 }
 

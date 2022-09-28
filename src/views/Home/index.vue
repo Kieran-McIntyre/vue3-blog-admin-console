@@ -1,7 +1,7 @@
 <script setup>
-import { RouterView } from 'vue-router'
-import VSidebarMenu from '@/components/layout/VSidebarMenu/index.vue'
-import VHeader from '@/components/layout/VHeader/index.vue'
+import { RouterView } from "vue-router"
+import VSidebarMenu from "@/components/layout/VSidebarMenu/index.vue"
+import VHeader from "@/components/layout/VHeader/index.vue"
 </script>
 
 <template>

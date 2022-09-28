@@ -1,3 +1,3 @@
 export default {
-  create: "Create New"
+  create: "Create New",
 }

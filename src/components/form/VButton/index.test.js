@@ -1,15 +1,15 @@
-import { describe, it, expect } from 'vitest'
-import { shallowMount } from '@vue/test-utils'
-import VButton, { ButtonType } from './index.vue'
+import { describe, it, expect } from "vitest"
+import { shallowMount } from "@vue/test-utils"
+import VButton, { ButtonType } from "./index.vue"
 
-describe('VButton', () => {
+describe("VButton", () => {
   const mountComp = ({ props = {} } = {}) => {
     return shallowMount(VButton, {
-      props
+      props,
     })
   }
 
-  it('should render', () => {
+  it("should render", () => {
     // Arrange.
     const wrapper = mountComp()
 
@@ -25,11 +25,11 @@ describe('VButton', () => {
     expect(wrapper.emitted()).toEqual({})
 
     // Act.
-    wrapper.find('[data-test="button"]').trigger('click')
+    wrapper.find("[data-test=\"button\"]").trigger("click")
 
     // Assert.
     expect(wrapper.emitted()).toEqual({
-      click: [[]]
+      click: [[]],
     })
   })
 
@@ -44,11 +44,11 @@ describe('VButton', () => {
 
       // Assert.
       expect(wrapper.classes()).toEqual(expect.arrayContaining([
-        'border-transparent', 
-        'bg-indigo-600', 
-        'text-white', 
-        'hover:bg-indigo-700', 
-        'focus:ring-indigo-500',
+        "border-transparent", 
+        "bg-indigo-600", 
+        "text-white", 
+        "hover:bg-indigo-700", 
+        "focus:ring-indigo-500",
       ]))
     })
 
@@ -62,11 +62,11 @@ describe('VButton', () => {
 
       // Assert.
       expect(wrapper.classes()).toEqual(expect.arrayContaining([
-        'border-gray-300',
-        'bg-white',
-        'text-gray-700',
-        'hover:bg-gray-50',
-        'focus:ring-indigo-500',
+        "border-gray-300",
+        "bg-white",
+        "text-gray-700",
+        "hover:bg-gray-50",
+        "focus:ring-indigo-500",
       ]))
     })
   })

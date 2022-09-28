@@ -26,10 +26,10 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmits(['clickCreate'])
+const emit = defineEmits(["clickCreate"])
 
 const handleClickCreate = () => {
-  emit('clickCreate')
+  emit("clickCreate")
 }
 
 const loadingListItems = initializeArrayWithLength(LOADING_ITEMS_COUNT)

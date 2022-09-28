@@ -1,13 +1,13 @@
-import { describe, it, expect } from 'vitest'
-import { shallowMount } from '@vue/test-utils'
-import VHeader from './index.vue'
+import { describe, it, expect } from "vitest"
+import { shallowMount } from "@vue/test-utils"
+import VHeader from "./index.vue"
 
-describe('VHeader', () => {
+describe("VHeader", () => {
   const mountComp = () => {
     return shallowMount(VHeader)
   }
 
-  it('should render', () => {
+  it("should render", () => {
     // Arrange.
     const wrapper = mountComp()
 

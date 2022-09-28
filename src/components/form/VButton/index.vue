@@ -16,13 +16,13 @@ const props = defineProps({
   disabled: {
     type: Boolean,
     default: false,
-  }
+  },
 })
 
-const emit = defineEmits(['click'])
+const emit = defineEmits(["click"])
 
 const handleClick = () => {
-  emit('click')
+  emit("click")
 }
 
 const isTypePrimary = computed(() => props.type === ButtonType.Primary)

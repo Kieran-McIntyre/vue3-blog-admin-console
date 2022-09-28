@@ -1,11 +1,11 @@
-import { ref } from 'vue'
-import { defineStore } from 'pinia'
+import { ref } from "vue"
+import { defineStore } from "pinia"
 import { request } from "graphql-request"
 import { fetchAllAuthorsQuery } from "./queries"
-import { logError } from '@/utils/logger'
-import { createAuthor } from '@/models/createAuthor'
+import { logError } from "@/utils/logger"
+import { createAuthor } from "@/models/createAuthor"
 
-export const useAuthorStore = defineStore('author', () => {
+export const useAuthorStore = defineStore("author", () => {
   const authors = ref([])
   const isLoading = ref(true)
 
@@ -22,7 +22,7 @@ export const useAuthorStore = defineStore('author', () => {
       
       authors.value = authorData.map(createAuthor)
     } catch (error) {
-      logError('authorStore/fetchAll **fail**', {
+      logError("authorStore/fetchAll **fail**", {
         error: error.message,
       })
     } finally {
@@ -33,6 +33,6 @@ export const useAuthorStore = defineStore('author', () => {
   return { 
     authors,
     isLoading,
-    fetchAll 
+    fetchAll, 
   }
 })

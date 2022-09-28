@@ -1,19 +1,19 @@
 import { describe, expect, it } from "vitest"
 import { createArticle } from "./createArticle"
 
-describe('createArticle', () => {
-  it('has author > should return correctly', () => {
+describe("createArticle", () => {
+  it("has author > should return correctly", () => {
     // Arrange.
     const articleData = {
       id: "some-article-id", 
       title: "Some article title",
       heroImageUrl: "some-image-url",
-      publishedAt: '2022-09-28T11:55:59.741Z',
+      publishedAt: "2022-09-28T11:55:59.741Z",
       author: {
-        id: 'some-author-id',
-        firstName: 'Author First Name',
-        lastName: 'Author Last Name',
-      }
+        id: "some-author-id",
+        firstName: "Author First Name",
+        lastName: "Author Last Name",
+      },
     }
 
     const article = createArticle(articleData)
@@ -36,13 +36,13 @@ describe('createArticle', () => {
     }))
   })
 
-  it('does NOT have author > should return correctly', () => {
+  it("does NOT have author > should return correctly", () => {
      // Arrange.
      const articleData = {
       id: "some-article-id", 
       title: "Some article title",
       heroImageUrl: "some-image-url",
-      publishedAt: '2022-09-28T11:55:59.741Z',
+      publishedAt: "2022-09-28T11:55:59.741Z",
     }
 
     const article = createArticle(articleData)

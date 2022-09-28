@@ -2,16 +2,19 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
-  'extends': [
-    'plugin:vue/vue3-strongly-recommended',
-    'eslint:recommended'
+  extends: [
+    "plugin:vue/vue3-strongly-recommended",
+    "eslint:recommended",
   ],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: "latest",
   },
   rules: {
     "vue/multi-word-component-names": "off",
-  }
+    "quote-props": ["error", "as-needed"],
+    quotes: ["error", "double"],
+    "comma-dangle": ["error", "always-multiline"],
+  },
 }

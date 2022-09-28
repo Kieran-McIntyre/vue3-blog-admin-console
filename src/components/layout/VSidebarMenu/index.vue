@@ -4,12 +4,12 @@ import content from "./content"
 const navLinks = [
   {
     label: content.link.articles,
-    icon: 'fa-book',
+    icon: "fa-book",
     route: { name: "Articles" },
   },
   {
     label: content.link.authors,
-    icon: 'fa-users',
+    icon: "fa-users",
     route: { name: "Authors" },
   },
 ]

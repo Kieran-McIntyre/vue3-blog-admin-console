@@ -1,11 +1,11 @@
-import { ref } from 'vue'
-import { defineStore } from 'pinia'
+import { ref } from "vue"
+import { defineStore } from "pinia"
 import { request } from "graphql-request"
 import { fetchAllArticlesQuery } from "./queries"
-import { logError } from '@/utils/logger'
-import { createArticle } from '@/models/createArticle'
+import { logError } from "@/utils/logger"
+import { createArticle } from "@/models/createArticle"
 
-export const useArticleStore = defineStore('article', () => {
+export const useArticleStore = defineStore("article", () => {
   const articles = ref([])
   const isLoading = ref(true)
 
@@ -22,7 +22,7 @@ export const useArticleStore = defineStore('article', () => {
 
       articles.value = articleData.map(createArticle)
     } catch (error) {
-      logError('articleStore/fetchAll **fail**', {
+      logError("articleStore/fetchAll **fail**", {
         error: error.message,
       })
     } finally {
@@ -33,6 +33,6 @@ export const useArticleStore = defineStore('article', () => {
   return { 
     articles,
     isLoading,
-    fetchAll 
+    fetchAll, 
   }
 })

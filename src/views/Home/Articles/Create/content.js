@@ -1,3 +1,3 @@
 export default {
-  comingSoon: "Coming soon."
+  comingSoon: "Coming soon.",
 }

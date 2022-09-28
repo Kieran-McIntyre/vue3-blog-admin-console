@@ -1,13 +1,13 @@
-import { describe, it, expect } from 'vitest'
-import { shallowMount } from '@vue/test-utils'
-import ArticleCreateView from './index.vue'
+import { describe, it, expect } from "vitest"
+import { shallowMount } from "@vue/test-utils"
+import ArticleCreateView from "./index.vue"
 
-describe('ArticleCreateView', () => {
+describe("ArticleCreateView", () => {
   const mountComp = () => {
     return shallowMount(ArticleCreateView)
   }
 
-  it('should render', () => {
+  it("should render", () => {
     // Arrange.
     const wrapper = mountComp()
 

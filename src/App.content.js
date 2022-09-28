@@ -1,3 +1,3 @@
 export default {
-  mobileNotSupported: "Mobile UI not yet supported."
+  mobileNotSupported: "Mobile UI not yet supported.",
 }

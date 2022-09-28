@@ -1,14 +1,14 @@
-import { describe, it, beforeEach, expect, vi } from 'vitest'
-import { setActivePinia, createPinia } from 'pinia'
-import { useArticleStore } from '.'
+import { describe, it, beforeEach, expect, vi } from "vitest"
+import { setActivePinia, createPinia } from "pinia"
+import { useArticleStore } from "."
 import { request } from "graphql-request"
 import { fetchAllArticlesQuery } from "./queries"
 
 vi.mock("graphql-request", () => ({
-  request: vi.fn()
+  request: vi.fn(),
 }))
 
-describe('Article store', () => {
+describe("Article store", () => {
   beforeEach(() => {
     vi.clearAllMocks()
 
@@ -49,7 +49,7 @@ describe('Article store', () => {
       ]
 
       request.mockResolvedValue({
-        articles: expectedArticles
+        articles: expectedArticles,
       })
 
       const articleStore = useArticleStore()
