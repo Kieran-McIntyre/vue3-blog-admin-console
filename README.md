@@ -1,41 +1,51 @@
 # vue3-blog-admin-console
 
-This template should help get you started developing with Vue 3 in Vite.
+A work-in-progress Vue3 application to view, edit and create new articles for a publication platform.
 
-## Recommended IDE Setup
+![Vue3 Blog Admin Console Screenshot](https://res.cloudinary.com/dqpvghxsm/image/upload/v1664375441/vue3-article-min_z9xiyi.png)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Installation
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+Using npm:
 
 ```sh
 npm install
 ```
 
+or with yarn:
+
+```sh
+yarn
+```
+
 ### Compile and Hot-Reload for Development
+
+Using npm:
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+or with yarn:
 
 ```sh
-npm run build
+yarn dev
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+Using npm:
 
 ```sh
 npm run test:unit
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+or with yarn:
 
 ```sh
-npm run lint
+yarn test:unit
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
