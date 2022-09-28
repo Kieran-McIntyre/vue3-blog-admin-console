@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest"
 import { createArticle } from "./createArticle"
 
 describe("createArticle", () => {
-  it("has author > should return correctly", () => {
+  it("has author > should return formatted article", () => {
     // Arrange.
     const articleData = {
       id: "some-article-id", 
@@ -36,7 +36,7 @@ describe("createArticle", () => {
     }))
   })
 
-  it("does NOT have author > should return correctly", () => {
+  it("does NOT have author > should return formatted article", () => {
      // Arrange.
      const articleData = {
       id: "some-article-id", 
@@ -56,5 +56,31 @@ describe("createArticle", () => {
       publishedAt: "2022-09-28T11:55:59.741Z",
       title: "Some article title",
     }))
+  })
+
+  describe("getters", () => {
+    describe("getFormattedPublishedAt", () => {
+      it("does NOT have publishedAt date > should return empty string", () => {
+        // Arrange.
+        const articleData = {}
+
+        const article = createArticle(articleData)
+        
+        // Assert.
+        expect(article.getFormattedPublishedAt()).toBe("")
+      })
+
+      it("has publishedAt date > should return formatted date", () => {
+        // Arrange.
+        const articleData = {
+          publishedAt: "2022-09-28T11:55:59.741Z",
+        }
+
+        const article = createArticle(articleData)
+        
+        // Assert.
+        expect(article.getFormattedPublishedAt()).toBe("28 Sep 2022, 12:55")
+      })
+    })
   })
 })

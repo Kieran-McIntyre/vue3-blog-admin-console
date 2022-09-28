@@ -2,6 +2,7 @@ import { createAuthor } from "./createAuthor";
 import format from "date-fns/format"
 
 function getFormattedPublishedAt () {
+  if (!this.publishedAt) return ""
   return format(new Date(this.publishedAt), "d LLL yyyy, HH:mm")
 }
 
