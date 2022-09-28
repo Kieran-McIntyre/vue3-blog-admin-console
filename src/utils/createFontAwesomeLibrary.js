@@ -14,4 +14,3 @@ export const createFontAwesomeLibrary = () => {
     library.add(faIcon)
   })
 }
-

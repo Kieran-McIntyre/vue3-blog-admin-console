@@ -16,5 +16,7 @@ module.exports = {
     "quote-props": ["error", "as-needed"],
     quotes: ["error", "double"],
     "comma-dangle": ["error", "always-multiline"],
+    "object-curly-spacing": ["error", "always"],
+    "no-multiple-empty-lines": ["error", { max: 2, maxEOF: 0 }],
   },
 }
