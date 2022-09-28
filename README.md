@@ -32,7 +32,7 @@ or with yarn:
 yarn dev
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Run Unit Tests
 
 Using npm:
 
@@ -52,6 +52,7 @@ yarn test:unit
 - Implement creating new articles.
 - Implement viewing and editing existing authors.
 - Implement creating new authors.
+- Implement searching for Articles and Authors via a universal search bar.
 
 ## License
 
